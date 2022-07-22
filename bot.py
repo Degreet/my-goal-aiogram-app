@@ -10,6 +10,8 @@ if __name__ == "__main__":
     from handlers import setup_handlers
     from db import database
 
+    database.create()
     setup_handlers(dp)
+
     executor.start_polling(dp, skip_updates=False)
     database.db.close()

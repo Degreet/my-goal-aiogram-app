@@ -6,7 +6,7 @@ class Database:
     cur = db.cursor()
 
     def create(self):
-        self.cur.execute("""CREATE TABLE users (
+        self.cur.execute("""CREATE TABLE IF NOT EXISTS users (
             id int PRIMARY KEY,
             user_id int NOT NULL,
             goal varchar(100),
