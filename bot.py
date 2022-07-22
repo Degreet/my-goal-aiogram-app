@@ -11,5 +11,5 @@ if __name__ == "__main__":
     from db import database
 
     setup_handlers(dp)
-    executor.start_polling(dp, skip_updates=True)
+    executor.start_polling(dp, skip_updates=False)
     database.db.close()
